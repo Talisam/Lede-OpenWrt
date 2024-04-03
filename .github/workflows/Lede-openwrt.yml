@@ -43,7 +43,7 @@ env:
   CONFIG_FILE: diy.config
   DIY_OP_SH: diy-lede.sh
   SSH_ACTIONS: true
-  UPLOAD_BIN_DIR: true
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
   UPLOAD_REALEASE: false
@@ -53,7 +53,7 @@ env:
 jobs:
   build:
     name: 编译OpenWrt-lede固件
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
